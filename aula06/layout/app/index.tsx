@@ -2,21 +2,21 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 
 const imageSources = {
-  banhoETosa: require('../assets/images/banho.jpg'),
-  veterinario: require('../assets/images/vet.jpg'),
-  petSitter: require('../assets/images/sitter.jpg'),
-  hospedagemPet: require('../assets/images/hotel.jpg'),
-  dogWalker: require('../assets/images/walking.jpg'),
-  calendar: require('../assets/images/calendar.jpg'),
-  login: require('../assets/images/login.jpg'),
-  home: require('../assets/images/home.jpg'),
-  logo: require('../assets/images/home.jpg'),
+  banhoETosa: require('../assets/images/banho.png'),
+  veterinario: require('../assets/images/vet.png'),
+  petSitter: require('../assets/images/sitter.png'),
+  hospedagemPet: require('../assets/images/hotel.png'),
+  dogWalker: require('../assets/images/walking.png'),
+  calendar: require('../assets/images/calendar.png'),
+  login: require('../assets/images/login.png'),
+  home: require('../assets/images/home.png'),
+  logo: require('../assets/images/logo.png'),
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#fffae9',
     padding: 20,
   },
   servicos: {
@@ -24,12 +24,12 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     padding: 20,
     borderRadius: 10,
-    borderColor: '#a9a6a7',
+    borderColor: '#4a2f1d',
     borderWidth: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#fff4ca',
     flexDirection: 'row',
     alignItems: 'center',
-    shadowColor: '#a6a6a6',
+    shadowColor: '#4a2f1d',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.8,
     shadowRadius: 4,
@@ -60,12 +60,15 @@ const styles = StyleSheet.create({
   },
   footer: {
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'space-evenly',
     alignItems: 'center',
     paddingVertical: 10,
-    borderTopWidth: 1,
-    borderTopColor: '#ddd',
-    backgroundColor: '#f8f8f8',
+    backgroundColor: '#fff4ca',
+    shadowColor: '#4a2f1d',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.8,
+    shadowRadius: 4,
+    elevation: 3,
   },
   footerItem: {
     alignItems: 'center',
@@ -76,14 +79,12 @@ const styles = StyleSheet.create({
   header: {
     width: '100%',
     padding: 10,
-    backgroundColor: '#f8f8f8',
+    backgroundColor: '#fff4ca',
     alignItems: 'center',
-    borderBottomWidth: 1,
-    borderBottomColor: '#ddd',
   },
   logo: {
-    width: 100,
-    height: 40,
+    width: 170,
+    height: 70,
   },
 });
 
@@ -139,7 +140,7 @@ export default function Index() {
       <View style={styles.footer}>
         <TouchableOpacity style={styles.footerItem}>
           <Image style={styles.imagefooter} source={imageSources.calendar} />
-          <Text style={styles.footerText}>Serviços agen...</Text>
+          <Text style={styles.footerText} href='..\login.tsx'>Agenda</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.footerItem}>
           <Image style={styles.imagefooter} source={imageSources.home} />
